@@ -1,14 +1,12 @@
-﻿<div class="top-row ps-3 navbar navbar-dark"
-     style="@(IsMinimized ? "padding-left: 0 !important; justify-content: center;" : "")">
-    <div class="container-fluid" style="@(IsMinimized ? "padding: 0;" : "")">
-        <a class="navbar-brand" href="" style="@(IsMinimized ? "display: none;" : "")">MissionLensApp</a>
+﻿<div class="top-row ps-3 navbar navbar-dark" style="padding-left: 60px !important;">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="">MissionLensApp</a>
     </div>
 </div>
 
 <input type="checkbox" title="Navigation menu" class="navbar-toggler" />
 
-<div class="nav-scrollable @(IsMinimized ? "minimized" : "")"
-     onclick="document.querySelector('.navbar-toggler').click()">
+<div class="nav-scrollable" id="navmenu" onclick="document.querySelector('.navbar-toggler').click()">
     <nav class="nav flex-column">
         <div class="nav-item px-3">
             <NavLink class="nav-link" href="" Match="NavLinkMatch.All" title="Home">

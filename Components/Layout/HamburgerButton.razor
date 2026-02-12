@@ -1,0 +1,28 @@
+@rendermode InteractiveServer
+@inject IJSRuntime JS
+
+<button class="hamburger-button" @onclick="ToggleSidebar" title="Toggle sidebar"    style="position: fixed; top: 12px; left: 12px; width: 46px; height: 46px; 
+    background-color: @(isMinimized ? "#0a4d99" : "#052767"); border: 3px solid white; border-radius: 8px; 
+    cursor: pointer; z-index: 9999; display: flex; align-items: center; 
+    justify-content: center; box-shadow: 0 4px 12px rgba(0,0,0,0.5);">
+    <span style="display: block; width: 26px; height: 3px; background-color: white; 
+        position: relative;">
+        <span style="position: absolute; width: 26px; height: 3px; background-color: white; 
+        top: -8px; left: 0;"></span>
+        <span style="position: absolute; width: 26px; height: 3px; background-color: white; 
+        top: 8px; left: 0;"></span>
+    </span>
+</button>
+
+@code {
+    private bool isMinimized = false;
+
+    private async Task ToggleSidebar()
+    {
+        isMinimized = !isMinimized;
+
+        var width = isMinimized ? "70px" : "250px";
+        await JS.InvokeVoidAsync("eval", $"document.getElementById('sidebar').style.width = '{width}'");
+        await JS.InvokeVoidAsync("eval", $"document.getElementById('navmenu').className = 'nav-scrollable{(isMinimized ? " minimized" : "")}'");
+    }
+}

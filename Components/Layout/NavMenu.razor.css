@@ -72,19 +72,29 @@
 }
 
 .nav-scrollable.minimized .nav-item ::deep .nav-link {
-    justify-content: center;
+    justify-content: center !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
 }
 
 .nav-scrollable.minimized .nav-text {
-    display: none;
+    display: none !important;
+}
+
+.nav-scrollable.minimized .bi {
+    margin-right: 0 !important;
 }
 
 .sidebar:hover .nav-scrollable.minimized .nav-text {
-    display: inline;
+    display: inline !important;
 }
 
 .sidebar:hover .nav-scrollable.minimized .nav-item ::deep .nav-link {
-    justify-content: flex-start;
+    justify-content: flex-start !important;
+}
+
+.sidebar:hover .nav-scrollable.minimized .bi {
+    margin-right: 0.75rem !important;
 }
 
 .nav-item ::deep a.active {
