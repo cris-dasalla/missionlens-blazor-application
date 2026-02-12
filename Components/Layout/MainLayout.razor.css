@@ -15,8 +15,8 @@ main {
 
 .hamburger-button {
     position: fixed;
-    top: 10px;
-    left: 10px;
+    top: 15px;
+    left: 15px;
     width: 45px;
     height: 45px;
     background-color: rgb(5, 39, 103);
@@ -24,17 +24,11 @@ main {
     border-radius: 6px;
     cursor: pointer;
     z-index: 1002;
-    display: none;
+    display: flex;
     align-items: center;
     justify-content: center;
     transition: all 0.2s ease;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-}
-
-@media (min-width: 641px) {
-    .hamburger-button {
-        display: flex;
-    }
 }
 
 .hamburger-button:hover {
