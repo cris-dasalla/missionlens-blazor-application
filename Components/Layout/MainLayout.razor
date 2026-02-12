@@ -1,16 +1,15 @@
 ﻿@inherits LayoutComponentBase
 
-<button class="hamburger-button" @onclick="ToggleSidebar" title="Toggle sidebar"
-        style="position: fixed; top: 20px; left: 20px; width: 50px; height: 50px; 
-               background-color: #052767; border: 3px solid white; border-radius: 8px; 
-               cursor: pointer; z-index: 9999; display: flex; align-items: center; 
-               justify-content: center; box-shadow: 0 4px 12px rgba(0,0,0,0.5);">
+<button class="hamburger-button" @onclick="ToggleSidebar" title="Toggle sidebar"    style="position: fixed; top: 20px; left: 20px; width: 50px; height: 50px; 
+    background-color: #052767; border: 3px solid white; border-radius: 8px; 
+    cursor: pointer; z-index: 9999; display: flex; align-items: center; 
+    justify-content: center; box-shadow: 0 4px 12px rgba(0,0,0,0.5);">
     <span style="display: block; width: 26px; height: 3px; background-color: white; 
-                 position: relative;">
+        position: relative;">
         <span style="position: absolute; width: 26px; height: 3px; background-color: white; 
-                     top: -8px; left: 0;"></span>
+        top: -8px; left: 0;"></span>
         <span style="position: absolute; width: 26px; height: 3px; background-color: white; 
-                     top: 8px; left: 0;"></span>
+        top: 8px; left: 0;"></span>
     </span>
 </button>
 
